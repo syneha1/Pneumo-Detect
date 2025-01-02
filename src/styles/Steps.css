@@ -1,9 +1,8 @@
-.steps-section {
+.steps {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: center; /* Center the steps section */
+  gap: 2rem; /* Add space between step boxes */
   margin-top: 2rem;
-  gap: 2rem;
 }
 
 .step-box {
@@ -18,14 +17,14 @@
 }
 
 .step-box:hover {
-  transform: translateY(-5px); /* Add a slight hover effect */
+  transform: translateY(-5px); /* Add hover lift effect */
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .step-number {
   background-color: black;
   color: white;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
   border-radius: 50%;
   width: 50px;
@@ -37,7 +36,6 @@
 }
 
 .step-box p {
-  margin-top: 1rem;
   font-size: 1.1rem;
   line-height: 1.5;
 }

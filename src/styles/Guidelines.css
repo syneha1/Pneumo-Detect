@@ -2,16 +2,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 2rem 0;
-  padding: 1.5rem;
+  margin-top: 2rem;
+  padding: 2rem;
   background-color: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  gap: 2rem; /* Add space between the text and image */
 }
 
 .guidelines-text {
-  max-width: 60%;
-  margin-right: 2rem; /* Add space between text and image */
+  max-width: 50%; /* Limit text width */
 }
 
 .guidelines-text h2 {
@@ -21,7 +21,7 @@
 }
 
 .guidelines-text ul {
-  list-style-type: none;
+  list-style-type: none; /* Remove bullet points */
   padding: 0;
 }
 
@@ -32,11 +32,11 @@
 }
 
 .doctor-image {
-  max-width: 30%;
+  max-width: 30%; /* Restrict image width */
 }
 
 .doctor-image img {
   width: 100%;
   border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
 }
