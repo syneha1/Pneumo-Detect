@@ -1,7 +1,6 @@
 import React from "react";
 import "./styles/App.css";
 
-
 const App = () => {
   return (
     <div className="app-container">
@@ -27,15 +26,13 @@ const App = () => {
           </div>
         </div>
 
-        {/* Down Portion - Guidelines and Steps */}
+        {/* Layout Section */}
         <div className="layout">
-          {/* Doctor Image and Message Section */}
-          <div className="doctor-section">
-            <img
-              src={require("./assets/doctor.png")}
-              alt="doctor"
-              className="doctor"
-            />
+          {/* Left Side: Doctor Image and Message */}
+          <div className="doctor-message-section">
+            <div className="doctor">
+              <img src={require("./assets/doctor.png")} alt="doctor" />
+            </div>
             <div className="message">
               <h2>Make sure:</h2>
               <ul>
@@ -45,7 +42,7 @@ const App = () => {
             </div>
           </div>
 
-          {/* Steps Section */}
+          {/* Right Side: Steps Section */}
           <div className="steps-section">
             <div className="step-box">
               <div className="step-number">1</div>
@@ -71,4 +68,3 @@ const App = () => {
 };
 
 export default App;
-
