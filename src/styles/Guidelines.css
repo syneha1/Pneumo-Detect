@@ -1,0 +1,42 @@
+.guidelines {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.guidelines-text {
+  max-width: 60%;
+  margin-right: 2rem; /* Add space between text and image */
+}
+
+.guidelines-text h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.guidelines-text ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.guidelines-text li {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.doctor-image {
+  max-width: 30%;
+}
+
+.doctor-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}

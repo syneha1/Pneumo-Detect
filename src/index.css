@@ -1,0 +1,28 @@
+body {
+  font-family: 'Roboto', Arial, sans-serif; /* Use a modern, clean font */
+  font-size: 16px; /* Set a base font size */
+  line-height: 1.6; /* Improve readability */
+  color: #333; /* Use a neutral text color */
+}
+
+h1 {
+  font-size: 2.5rem; /* Increase the size for the main header */
+}
+
+h2 {
+  font-size: 2rem; /* Adjust the size for subheaders */
+}
+
+p, li {
+  font-size: 1.2rem; /* Set a readable font size for text */
+}
+
+button {
+  font-size: 1rem; /* Ensure button text is proportional */
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

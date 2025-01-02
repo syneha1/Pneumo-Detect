@@ -1,0 +1,13 @@
+.app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    flex-direction: column; /* Stack Guidelines and Steps vertically */
+    gap: 2rem; /* Add space between Guidelines and Steps */
+    margin-top: 2rem;
+  }
+  
