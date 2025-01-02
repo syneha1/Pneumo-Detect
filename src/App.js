@@ -36,8 +36,8 @@ const App = () => {
             <div className="message">
               <h2>Make sure:</h2>
               <ul>
-                <li>Uploaded image has X-ray on it</li>
-                <li>The image is not blurry</li>
+                <li>Uploaded image has X-ray on it.</li>
+                <li>The image is not blurry.</li>
               </ul>
             </div>
           </div>
