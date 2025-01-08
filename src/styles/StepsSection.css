@@ -1,0 +1,37 @@
+.steps-section {
+    display: flex;
+    flex: 1; /* Allow the steps section to take remaining space */
+    justify-content: space-around; /* Space out the steps evenly */
+    gap: 2rem; /* Adjust gap between the steps boxes */
+  }
+  
+  .step-box {
+    background-color: #ff5733; /* Set orange background */
+    color: white; /* Set text color */
+    padding: 1.5rem;
+    border-radius: 10px; /* Add rounded corners */
+    width: 250px; /* Consistent width for all steps */
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+  }
+  
+  .step-number {
+    background-color: black; /* Set black background for numbers */
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 50%; /* Make the container circular */
+    width: 50px;
+    height: 50px;
+    display: flex; /* Use flexbox for centering */
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1rem auto; /* Center-align the number */
+  }
+  
+  .step-box p {
+    font-size: 1.3rem; /* Adjust font size for text */
+    line-height: 1.5; /* Add line height for readability */
+    margin: 0; /* Remove default paragraph margins */
+  }
+  

@@ -1,0 +1,21 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #1f1f1f;
+  }
+  
+  .app-container {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .layout {
+    display: flex;
+    justify-content: space-between; /* Add space between doctor and steps */
+    align-items: flex-start; /* Align items to the top */
+    gap: 5rem; /* Set a good distance between doctor and steps section */
+    width: 100%;
+    margin: 2rem 0; /* Add spacing above and below the layout */
+  }
+  
