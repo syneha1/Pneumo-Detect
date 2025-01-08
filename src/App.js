@@ -40,7 +40,8 @@ const App = () => {
   // Handle login functionality
   const handleLogin = () => {
     const matchedUser = registeredUsers.find(
-      (u) => u.username === formData.username && u.password === formData.password
+      (u) =>
+        u.username === formData.username && u.password === formData.password
     );
 
     if (matchedUser) {
@@ -53,8 +54,26 @@ const App = () => {
     }
   };
 
+  // Handle logout functionality
   const handleLogout = () => {
     setUser(null);
+  };
+
+  // Handle X-ray upload
+  const handleUpload = (event) => {
+    const file = event.target.files[0]; // Get the uploaded file
+    if (file) {
+      alert(`File uploaded: ${file.name}`);
+      // Add additional logic to send the file to a server or process it
+    } else {
+      alert("No file selected!");
+    }
+  };
+
+  // Handle show results
+  const handleShowResults = () => {
+    alert("Showing results...");
+    // Replace with logic to fetch results from a backend API
   };
 
   return (
@@ -98,16 +117,26 @@ const App = () => {
                 <h1>GET YOUR XRAY CHECKED</h1>
                 <p>Upload your X-ray to check for pneumonia with AI assistance</p>
                 <div className="action-buttons">
-                  <button className="upload-btn">Upload X-ray</button>
-                  <button className="results-btn">Show Results</button>
+                  <label htmlFor="file-upload" className="upload-btn">
+                    Upload X-ray
+                  </label>
+                  <input
+                    id="file-upload"
+                    type="file"
+                    accept="image/*"
+                    style={{ display: "none" }}
+                    onChange={handleUpload}
+                  />
+                  <button className="results-btn" onClick={handleShowResults}>
+                    Show Results
+                  </button>
                 </div>
               </>
             ) : (
               <div className="hero-text">
-              <h1>Get your X-ray checked through our</h1>
-  <div className="highlight-box">PneumoDetect</div>
-</div>
-
+                <h1>Get your X-ray checked through our</h1>
+                <div className="highlight-box">PneumoDetect</div>
+              </div>
             )}
           </div>
           <div className="pneumo-detect">
