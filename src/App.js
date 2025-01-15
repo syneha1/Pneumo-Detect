@@ -13,7 +13,6 @@ const App = () => {
   const [showCreateAccountModal, setShowCreateAccountModal] = useState(false);
   const [formData, setFormData] = useState({});
   const [uploadedFile, setUploadedFile] = useState(null); // State to store uploaded file
-  const [result, setResult] = useState(""); // State to store result from backend or ML model
 
   const handleInputChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -27,6 +26,7 @@ const App = () => {
       formData.username &&
       formData.password
     ) {
+      // TODO: Replace this alert with a backend API call to register the user
       alert("Account created successfully!");
       setShowCreateAccountModal(false);
       setFormData({});
@@ -37,8 +37,10 @@ const App = () => {
 
   const handleLogin = () => {
     if (formData.username && formData.password) {
-      setUser({ firstName: "John" }); // Simulated user
+      // TODO: Replace this with a backend API call for user authentication
+      setUser({ firstName: formData.username }); // Dummy login with the username
       setShowLoginModal(false);
+      setFormData({}); // Clear the form data
     } else {
       alert("Invalid username or password!");
     }
@@ -46,6 +48,7 @@ const App = () => {
 
   const handleLogout = () => {
     setUser(null);
+    // TODO: Optionally clear tokens or session data stored locally
   };
 
   // Handle X-ray upload
@@ -53,6 +56,7 @@ const App = () => {
     const file = event.target.files[0];
     if (file) {
       setUploadedFile(file);
+      // TODO: Replace this alert with a backend API call to upload the file
       alert(`File uploaded: ${file.name}`);
     } else {
       alert("No file selected!");
@@ -62,8 +66,7 @@ const App = () => {
   // Handle showing results
   const handleShowResults = () => {
     if (uploadedFile) {
-      // Simulate fetching results from a backend/ML model
-      setResult("Pneumonia detected!"); // Replace with actual logic when integrated with backend
+      // TODO: Replace this dummy result with a backend API call to fetch the analysis result
       alert("Pneumonia detected!");
     } else {
       alert("Please upload an X-ray image first!");

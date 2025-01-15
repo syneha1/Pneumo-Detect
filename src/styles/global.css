@@ -14,7 +14,7 @@ body {
     display: flex;
     justify-content: space-between; /* Add space between doctor and steps */
     align-items: flex-start; /* Align items to the top */
-    gap: 5rem; /* Set a good distance between doctor and steps section */
+    gap: 40rem; /* Set a good distance between doctor and steps section */
     width: 100%;
     margin: 2rem 0; /* Add spacing above and below the layout */
   }
