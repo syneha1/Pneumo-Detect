@@ -1,7 +1,7 @@
 .steps-section {
   display: flex;
-  flex: 1; /* Allow the steps section to take remaining space */
-  
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  justify-content: center; /* Center the steps on smaller screens */
   gap: 2rem; /* Adjust gap between the steps boxes */
 }
 
@@ -10,7 +10,7 @@
   color: white; /* Set text color */
   padding: 1.5rem;
   border-radius: 10px; /* Add rounded corners */
-  width: 250px; /* Consistent width for all steps */
+  width: 250px; /* Default width for larger screens */
   text-align: center;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect */
 }
@@ -33,4 +33,38 @@
   font-size: 1.3rem; /* Adjust font size for text */
   line-height: 1.5; /* Add line height for readability */
   margin: 0; /* Remove default paragraph margins */
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .steps-section {
+    flex-direction: column; /* Stack the step boxes vertically */
+    align-items: center; /* Center align the boxes */
+    gap: 1.5rem; /* Reduce the gap between the boxes */
+  }
+
+  .step-box {
+    width: 80%; /* Make the step boxes wider for smaller screens */
+    padding: 1rem; /* Reduce padding for smaller screens */
+  }
+
+  .step-number {
+    font-size: 1.5rem; /* Reduce font size for numbers */
+    width: 40px; /* Adjust circle size */
+    height: 40px;
+  }
+
+  .step-box p {
+    font-size: 1.2rem; /* Reduce font size for text */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .step-box {
+    width: 100%; /* Step boxes take full width on very small screens */
+  }
+
+  .step-box p {
+    font-size: 1rem; /* Further reduce font size for smaller screens */
+  }
 }

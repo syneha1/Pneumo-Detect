@@ -1,36 +1,87 @@
+/* General Header Styles */
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #0f0e0e;
-    color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #0f0e0e;
+  color: white;
+}
+
+.header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header .auth-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.header .login-btn,
+.header .create-account-btn,
+.header .logout-btn {
+  background-color: #ff5733;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.welcome-message {
+  font-size: 1rem;
+  color: white;
+  margin-right: 1rem;
+}
+
+/* Responsive Design */
+
+/* For tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Stack elements vertically */
+    padding: 1rem;
+    text-align: center;
   }
-  
+
   .header .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 1.2rem; /* Reduce logo size */
+    margin-bottom: 1rem;
   }
-  
+
   .header .auth-buttons {
-    display: flex;
-    gap: 1rem;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 0.5rem;
   }
-  
+
   .header .login-btn,
   .header .create-account-btn,
   .header .logout-btn {
-    background-color: #ff5733;
-    color: white;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .welcome-message {
+    width: 100%; /* Make buttons take full width */
+    padding: 0.7rem 0;
     font-size: 1rem;
-    color: white;
-    margin-right: 1rem;
   }
-  
+}
+
+/* For mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .header .logo {
+    font-size: 1rem; /* Further reduce logo size */
+  }
+
+  .header .auth-buttons {
+    gap: 0.3rem;
+  }
+
+  .header .login-btn,
+  .header .create-account-btn,
+  .header .logout-btn {
+    font-size: 0.9rem; /* Reduce button font size */
+    padding: 0.6rem 0;
+  }
+
+  .welcome-message {
+    font-size: 0.9rem; /* Adjust welcome message font */
+  }
+}

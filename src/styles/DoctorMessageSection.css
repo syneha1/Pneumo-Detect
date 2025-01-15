@@ -5,6 +5,7 @@
   align-items: flex-start;
 }
 
+/* Doctor Image */
 .doctor img {
   width: 250px;
   height: auto;
@@ -12,6 +13,7 @@
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Message Section */
 .message {
   max-width: 300px;
 }
@@ -30,4 +32,51 @@
   font-size: 1.5rem;
   line-height: 1.5;
   margin-bottom: 0.5rem;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .doctor-message-section {
+    flex-direction: column; /* Stack doctor image and message vertically */
+    align-items: center; /* Center align the content */
+    gap: 1.5rem; /* Reduce the gap */
+  }
+
+  .doctor img {
+    width: 200px; /* Scale down the image size */
+  }
+
+  .message {
+    max-width: 100%; /* Expand the message width for smaller screens */
+    text-align: center; /* Center-align the text */
+  }
+
+  .message h2 {
+    font-size: 1.8rem; /* Adjust heading font size */
+  }
+
+  .message li {
+    font-size: 1.3rem; /* Adjust list item font size */
+  }
+}
+
+/* For mobile phones (max-width: 480px) */
+@media (max-width: 480px) {
+  .doctor img {
+    width: 150px; /* Further reduce image size */
+  }
+
+  .message h2 {
+    font-size: 1.5rem; /* Further reduce heading size */
+  }
+
+  .message li {
+    font-size: 1.2rem; /* Adjust list item font size */
+  }
+
+  .doctor-message-section {
+    gap: 1rem; /* Reduce gap for smaller screens */
+  }
 }

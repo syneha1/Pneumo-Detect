@@ -1,21 +1,49 @@
 /* General Styles */
 body {
-    font-family: 'Roboto', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #1f1f1f;
-  }
-  
-  .app-container {
-    width: 100%;
-    margin: 0 auto;
-  }
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #1f1f1f;
+}
+
+.app-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.layout {
+  display: flex;
+  justify-content: space-between; /* Add space between doctor and steps */
+  align-items: flex-start; /* Align items to the top */
+  gap: 4rem; /* Default gap between doctor and steps */
+  width: 100%;
+  margin: 2rem 0; /* Add spacing above and below the layout */
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1024px) {
   .layout {
-    display: flex;
-    justify-content: space-between; /* Add space between doctor and steps */
-    align-items: flex-start; /* Align items to the top */
-    gap: 40rem; /* Set a good distance between doctor and steps section */
-    width: 100%;
-    margin: 2rem 0; /* Add spacing above and below the layout */
+    gap: 3rem; /* Reduce gap for tablets */
+    flex-wrap: wrap; /* Allow elements to wrap on smaller screens */
+    justify-content: center; /* Center items on smaller screens */
   }
+}
+
+@media screen and (max-width: 768px) {
+  .layout {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align stacked items */
+    gap: 2rem; /* Reduce gap further for tablets */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .layout {
+    flex-direction: column; /* Keep elements stacked vertically */
+    align-items: center; /* Center align stacked items */
+    gap: 1.5rem; /* Narrow gap for smaller screens */
+    margin: 1rem 0; /* Reduce margin for smaller devices */
+  }
+}
+
   

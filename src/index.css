@@ -34,7 +34,8 @@ header h1 {
   font-size: 1.5rem;
 }
 
-header .login-btn, header .create-btn {
+header .login-btn, 
+header .create-btn {
   background: none;
   border: none;
   color: white;
@@ -66,4 +67,72 @@ main .upload-btn {
 
 main .upload-btn:hover {
   background-color: #e04e2c;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1024px) {
+  .app-container {
+    max-width: 95%; /* Use more screen width on tablets */
+  }
+
+  header h1 {
+    font-size: 1.3rem; /* Reduce font size for tablets */
+  }
+
+  header .login-btn, 
+  header .create-btn {
+    font-size: 0.9rem; /* Adjust button font size */
+  }
+
+  main .upload-btn {
+    padding: 0.8rem 1.5rem; /* Reduce button padding */
+    font-size: 1rem; /* Adjust font size for buttons */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column; /* Stack header elements */
+    align-items: flex-start; /* Align items to the start */
+    gap: 0.5rem; /* Add space between elements */
+  }
+
+  .app-container {
+    padding: 0.5rem; /* Reduce container padding */
+  }
+
+  header h1 {
+    font-size: 1.2rem; /* Smaller font for mobile screens */
+  }
+
+  header .login-btn, 
+  header .create-btn {
+    font-size: 0.85rem; /* Further reduce button font size */
+  }
+
+  main .upload-btn {
+    padding: 0.7rem 1.2rem; /* Compact button padding */
+    font-size: 0.9rem; /* Adjust font size */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    padding: 0.5rem; /* Reduce padding for smaller screens */
+  }
+
+  header h1 {
+    font-size: 1rem; /* Even smaller font size */
+  }
+
+  header .login-btn, 
+  header .create-btn {
+    font-size: 0.8rem; /* Small font for buttons */
+  }
+
+  main .upload-btn {
+    width: 100%; /* Make buttons full-width */
+    text-align: center;
+    font-size: 0.85rem; /* Adjust font size */
+  }
 }
